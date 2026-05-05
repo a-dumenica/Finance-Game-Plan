@@ -1,7 +1,5 @@
 # Finance Game — Backend Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
-
 **Goal:** Build a server-authoritative NestJS backend with a real-time WebSocket tick engine, shared player market, business simulation, admin controls, and crash recovery.
 
 **Architecture:** NestJS modular monolith. A 5-second @Cron tick loop runs MacroEngine → EventManager → MarketEngine → BusinessEngine → LeaderboardService → Socket.io broadcast. Trades are validated immediately and queued in Redis; all financial state is persisted to PostgreSQL with ACID guarantees. On startup, RecoveryService replays the ledger from the last checkpoint to restore Redis state.
