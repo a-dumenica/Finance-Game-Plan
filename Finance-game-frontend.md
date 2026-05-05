@@ -1,7 +1,5 @@
 # Finance Game — Frontend Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
-
 **Goal:** Build the React frontend — auth screens, real-time market dashboard, business management, leaderboard, and admin panel — consuming the NestJS backend via REST and Socket.io.
 
 **Prerequisite:** The backend plan (`2026-04-25-finance-game-backend.md`) must be complete and the server must be running at `http://localhost:3000`.
